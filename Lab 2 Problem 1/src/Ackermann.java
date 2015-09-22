@@ -10,11 +10,12 @@
  */
 public class Ackermann {
 
-    
-    public Ackermann() {
-
-    }
-    
+    /**
+     *
+     * @param m
+     * @param n
+     * @return
+     */
     public int Solve(int m, int n) {
         if (m == 0) {
             return n + 1;
