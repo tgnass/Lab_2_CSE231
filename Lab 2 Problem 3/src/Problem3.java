@@ -9,7 +9,7 @@ import java.math.BigInteger;
 
 /**
  *
- * @author tgnas_000
+ * @author Tyler
  */
 public class Problem3 {
 
@@ -18,7 +18,7 @@ public class Problem3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Result of 6! : " + factorial(BigInteger.ONE));
+        System.out.println("Result of 6! : " + factorial(BigInteger.valueOf(6)));
         System.out.println("Sum of the digits: " + addDigits(BigInteger.ONE));
     }
     
