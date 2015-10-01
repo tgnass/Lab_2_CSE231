@@ -10,15 +10,15 @@ public class Ackermann {
      * @param n
      * @return
      */
-    public int Solve(int m, int n) {
+    public int solve(int m, int n) {
         if (m == 0) {
             return n + 1;
         }
         
         if (n == 0) {
-            return Solve(m - 1, 1);
+            return solve(m - 1, 1);
         }
         
-        return Solve(m - 1, Solve(m, n - 1));
+        return solve(m - 1, solve(m, n - 1));
     }
 }

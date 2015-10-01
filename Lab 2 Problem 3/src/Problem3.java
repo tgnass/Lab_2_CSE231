@@ -12,12 +12,22 @@ public class Problem3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Result of 6! : " + factorial(BigInteger.valueOf(6)));
-        System.out.println("Sum of the digits: " + addDigits(BigInteger.ONE));
+        
+        BigInteger factorialNumber = factorial(new BigInteger("6"));
+        System.out.println("Result of 6! : " + factorialNumber);
+        System.out.println("Sum of the digits: " + addDigits(factorialNumber));
     }
     
     private static int addDigits(BigInteger sum) {
-        return 0;
+        int total = 0;
+        String digits = sum.toString();
+        
+        for(int i = 0; i < digits.length(); i++) {
+            int digit = (int)(digits.charAt(i) - '0');
+            total = total + digit;
+        }
+        
+        return total;
     }
     
     /**
@@ -26,6 +36,14 @@ public class Problem3 {
      * @return
      */
     public static BigInteger factorial(BigInteger n) {
-        return n;
+        
+        BigInteger returnValue;
+        
+        if (n.intValue() == 0)
+            returnValue = BigInteger.ONE;
+        else
+            returnValue = (n.multiply(factorial(n.subtract(BigInteger.ONE))));
+        
+        return returnValue;        
     }    
 }
